@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+	<style>
+	.blur-up {
+		-webkit-filter: blur(8px);
+		filter: blur(8px);
+		/* background-image: url('sample.jpg'); */
+		background-color: #eee;
+		transition: filter 200ms, -webkit-filter 200ms;
+		-webkit-transform: translate3d(0,0,0);
+    	transform: translate3d(0,0,0);
+	}
+
+	.blur-up.loaded {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}
+
+	img:not([src]) {
+	    visibility: hidden;
+	}
+</style>
+
+<title>Lazy Load w/ Blur</title>
+</head>
+<body>
+	<div class="card mb-3 container">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source
+			data-srcset="https://i.imgur.com/9eONdUg.jpg"
+			media="(min-width: 1600px)" />
+			<source
+			data-srcset="https://i.imgur.com/9eONdUg.jpg"
+			media="(min-width: 1280px)" />
+			<source
+			data-srcset="https://i.imgur.com/meNGl3K.jpg"
+			media="(min-width: 960px)" />
+			<source
+			data-srcset="https://i.imgur.com/9eONdUg.jpg"
+			media="(min-width: 320px)" />
+			<!--[if IE 9]></video><![endif]-->
+			<img
+			data-src="sample.jpg"
+			class="card-img-top"
+			height="300px"
+			alt="card-image" >
+		</picture>
+		<div class="card-body">
+			<h5 class="card-title">Card title</h5>
+			<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+			<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+		</div>
+	</div>
+	<div class="container">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse orci nisi, vestibulum sit amet elementum id, malesuada vel nulla. Ut sed tellus fringilla, tincidunt sem a, auctor urna. Etiam consequat, libero vel suscipit tristique, nisl purus vulputate justo, sit amet molestie justo tortor vel ipsum. Etiam ultricies est at mauris imperdiet, et tincidunt purus auctor. Sed accumsan, eros in iaculis iaculis, est enim interdum nulla, non fermentum elit massa vehicula lacus. Duis malesuada lectus ac lacus pulvinar, id efficitur leo venenatis. Curabitur in risus quis arcu faucibus faucibus et vel leo. Aliquam sed nunc placerat, semper ligula suscipit, elementum tortor. Vestibulum auctor tincidunt risus, vitae blandit elit commodo a.</br></br>
+
+		Etiam vitae hendrerit elit, mollis dignissim lorem. Curabitur aliquet augue sit amet dui convallis, et hendrerit mauris imperdiet. Nam bibendum dolor in velit euismod mollis et at velit. Fusce tincidunt nibh leo, a aliquet est tincidunt ac. Aliquam risus dui, rhoncus convallis porta vel, dictum placerat velit. Maecenas iaculis magna condimentum, bibendum erat eu, volutpat nisi. Praesent scelerisque sed nunc pretium accumsan. Praesent a tempus felis, vel convallis dui. Praesent molestie euismod erat a feugiat.</br></br>
+
+		Etiam vitae hendrerit elit, mollis dignissim lorem. Curabitur aliquet augue sit amet dui convallis, et hendrerit mauris imperdiet. Nam bibendum dolor in velit euismod mollis et at velit. Fusce tincidunt nibh leo, a aliquet est tincidunt ac. Aliquam risus dui, rhoncus convallis porta vel, dictum placerat velit. Maecenas iaculis magna condimentum, bibendum erat eu, volutpat nisi. Praesent scelerisque sed nunc pretium accumsan. Praesent a tempus felis, vel convallis dui. Praesent molestie euismod erat a feugiat.
+	</div>
+
+	<div class="my-5 mx-3 d-block">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source
+			data-srcset="https://i.imgur.com/b9mit1n.jpg"
+			media="(min-width: 1600px)" />
+			<source
+			data-srcset="https://i.imgur.com/b9mit1n.jpg"
+			media="(min-width: 1280px)" />
+			<source
+			data-srcset="https://i.imgur.com/b9mit1n.jpg"
+			media="(min-width: 960px)" />
+			<source
+			data-srcset="https://i.imgur.com/b9mit1n.jpg"
+			media="(min-width: 320px)" />
+			<!--[if IE 9]></video><![endif]-->
+			<img
+			data-src="sample.jpg"
+			class="rounded"
+			width="300px"
+			height="300px"
+			alt="card-image" >
+		</picture>
+
+		<span class="d-inline">
+			Etiam vitae hendrerit elit, mollis dignissim lorem. Curabitur aliquet augue.
+		</span>
+	</div>
+
+	<picture>
+		<!--[if IE 9]><video style="display: none;"><![endif]-->
+		<source
+		data-srcset="https://i.imgur.com/bRvXsA0.jpg"
+		media="(min-width: 1600px)" />
+		<source
+		data-srcset="https://i.imgur.com/bRvXsA0.jpg"
+		media="(min-width: 1280px)" />
+		<source
+		data-srcset="https://i.imgur.com/bRvXsA0.jpg"
+		media="(min-width: 960px)" />
+		<source
+		data-srcset="https://i.imgur.com/bRvXsA0.jpg"
+		media="(min-width: 320px)" />
+		<!--[if IE 9]></video><![endif]-->
+		<img
+		data-src="sample.jpg"
+		class="rounded mx-auto d-block"
+		width="300px"
+		height="300px"
+		alt="card-image" >
+	</picture>
+
+	<div class="container my-5">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse orci nisi, vestibulum sit amet elementum id, malesuada vel nulla. Ut sed tellus fringilla, tincidunt sem a, auctor urna. Etiam consequat, libero vel suscipit tristique, nisl purus vulputate justo, sit amet molestie justo tortor vel ipsum. Etiam ultricies est at mauris imperdiet, et tincidunt purus auctor. Sed accumsan, eros in iaculis iaculis, est enim interdum nulla, non fermentum elit massa vehicula lacus. Duis malesuada lectus ac lacus pulvinar, id efficitur leo venenatis. Curabitur in risus quis arcu faucibus faucibus et vel leo. Aliquam sed nunc placerat, semper ligula suscipit, elementum tortor. Vestibulum auctor tincidunt risus, vitae blandit elit commodo a.</br></br>
+	</div>
+
+	<div class="m-3 d-block">
+		<picture>
+			<!--[if IE 9]><video style="display: none;"><![endif]-->
+			<source
+			data-srcset="https://i.imgur.com/trFuE7R.jpg"
+			media="(min-width: 1600px)" />
+			<source
+			data-srcset="https://i.imgur.com/trFuE7R.jpg"
+			media="(min-width: 1280px)" />
+			<source
+			data-srcset="https://i.imgur.com/trFuE7R.jpg"
+			media="(min-width: 960px)" />
+			<source
+			data-srcset="https://i.imgur.com/trFuE7R.jpg"
+			media="(min-width: 320px)" />
+			<!--[if IE 9]></video><![endif]-->
+			<img
+			data-src="sample.jpg"
+			class="rounded float-right"
+			width="300px"
+			height="300px"
+			alt="card-image" >
+		</picture>
+		<span class="d-inline">
+			Etiam vitae hendrerit elit, mollis dignissim lorem. Curabitur aliquet augue sit amet dui convallis, et hendrerit mauris imperdiet. Nam bibendum dolor in velit euismod mollis et at velit.</br></br>
+
+			Etiam vitae hendrerit elit, mollis dignissim lorem. Curabitur aliquet augue sit amet dui convallis, et hendrerit mauris imperdiet. Nam bibendum dolor in velit euismod mollis et at velit. Fusce tincidunt nibh leo, a aliquet est tincidunt ac. Aliquam risus dui, rhoncus convallis porta vel, dictum placerat velit. Maecenas iaculis magna condimentum, bibendum erat eu, volutpat nisi. Praesent scelerisque sed nunc pretium accumsan. Praesent a tempus felis, vel convallis dui. Praesent molestie euismod erat a feugiat.</br></br>
+
+			Aliquam tristique quam sit amet ornare placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras eleifend est at ipsum sodales facilisis. Nulla pellentesque tincidunt erat, id egestas libero pretium ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Cras faucibus dui quam, ut porttitor sapien commodo et. Donec tincidunt mollis eros vitae euismod.
+		</span>
+	</div>
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<!-- <script src="lazysizes.min.js" async=""></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.6.0/lazyload.min.js"></script>
+	<script src="static.js"></script>
+</body>
+</html>
